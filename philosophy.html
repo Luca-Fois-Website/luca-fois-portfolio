@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Stili CSS */
+
+    @font-face {
+      font-family: 'Raleway';
+      src: url('fonts/Raleway-Regular.ttf') format('truetype');
+    }
+
+    body {
+      background-color: #FFFCF9;
+      margin: 0;
+      padding: 0;
+      font-family: Raleway-Regular, sans-serif;
+    }
+
+    header {
+      background-color: #FFFCF9;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+        z-index: 999;
+    }
+
+    .content {
+      padding-bottom: 0px; /* Spazio inferiore per il pulsante fisso */
+      magin-bottom: 0px;
+    }
+
+    .logo {
+      height: 3vh;
+    }
+
+    .small-logo {
+      height: 3vh;
+      position: absolute;
+      top: 20px;
+      right: 60px;
+      cursor: pointer;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      right: 20px;
+      height: 5000px;
+      width: 400px;
+      background-color: rgba(255, 252, 249, 0.9);
+      padding: 30px;
+      display: none;
+    }
+
+    .dropdown-menu.open {
+      display: block;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      color: #0022D4;
+      font-size: 40px;
+      font-family: Raleway;
+      align-content: right;
+      text-decoration: none;
+      padding: 5px;
+      text-align: right; /* Allinea il testo a destra */
+    }
+
+    .menu-image {
+      height: 50px; /* Imposta l'altezza desiderata */
+      margin-left: 5px; /* Aggiunge un margine a destra per separare l'immagine dal testo */
+    }
+
+    .dropdown-menu {
+      z-index: 9999;
+    }
+
+
+
+    .section {
+      height: 100vh;
+    }
+
+    .section:nth-child(odd) {
+      background-color: #FFFCF9;
+    }
+
+    .section:nth-child(even) {
+      background-color: #FFFCF9;
+    }
+
+    .top-left-image {
+  position: absolute;
+  width: 40vh; /* Dimensione desiderata in pixel */
+  height: auto; /* Mantieni l'aspetto proporzionale */
+left: 20px;
+top: 80px;
+}
+
+
+
+.section:nth-child(2) {
+  background-image: url('img/sezione-01.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.section:nth-child(3) {
+  background-image: url('img/sezione-02.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.section:nth-child(4) {
+  background-image: url('img/sezione-03.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.section:nth-child(5) {
+  background-image: url('img/sezion-04.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.section:nth-child(6) {
+  background-image: url('img/sezione-05.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.section {
+  height: 100vh;
+  position: relative;
+}
+
+.section:nth-child(1) .centered-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.section .desktop-image {
+display: block;
+}
+
+.section .mobile-image {
+display: none;
+}
+
+
+
+    .footer {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background-color: #0022D4;
+      color: #FFFCF9;
+      border: 1.5px solid #0022D4;
+      border-radius: 40px;
+      font-family: Raleway;
+      font-size: 15px;
+      text-decoration: none;
+    }
+
+    .footer img {
+      width: 25px;
+      height: 25px;
+      object-fit: contain;
+    }
+
+    @media screen and (max-width: 768px) {
+
+      /* Stili per schermi di larghezza massima 768px (ad esempio dispositivi mobili) */
+      .section {
+        padding: 20px; /* Aggiungi spaziatura interna per i dispositivi mobili */
+      }
+
+      .section h1 {
+        font-size: 24px; /* Riduci la dimensione del titolo per i dispositivi mobili */
+      }
+
+      .section p {
+        font-size: 16px; /* Riduci la dimensione del testo per i dispositivi mobili */
+      }
+
+      .section img {
+        max-width: 100%; /* Assicurati che le immagini non superino la larghezza dello schermo */
+        height: auto; /* Mantieni l'altezza proporzionale alla larghezza */
+      }
+
+      .section:nth-child(1) .centered-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 100%;
+        max-height: 100%;
+      }
+
+
+.section .desktop-image {
+  display: none;
+}
+
+.section .mobile-image {
+  display: block;
+}
+
+.footer-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #0022D4;
+  color: #FFFCF9;
+  border: 1.5px solid #0022D4;
+  border-radius: 40px;
+  font-family: Raleway;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.footer-button img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+    }
+
+
+
+
+
+    @media screen and (min-width: 768px) {
+  /* Stili per schermi di larghezza minima di 768px (ad esempio desktop) */
+  .top-left-image {
+    width: 500px; /* Dimensione desiderata per dispositivi desktop */
+  }
+}
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <img src="img/logo.png" alt="Logo" class="logo">
+    </a>
+    <img src="img/burgermenu.png" alt="Small Logo" class="small-logo" onclick="toggleDropdown()">
+    <div class="dropdown-menu" id="dropdown-menu">
+      <a href="philosophy.html">philosophy</a>
+      <a href="projects.html">projects</a>
+      <a href="about.html">about</a>
+      <a href="contacts.html">
+        contacts
+        <br>
+        <br>
+        <img src="img/facciafois.png" alt="Small Image" class="menu-image">
+      </a>
+    </div>
+  </header>
+
+  <div class="content">
+
+    <div class="section">
+      <img src="img/sezione-00-new.png" alt="Desktop Image" class="centered-image desktop-image">
+       <img src="img/sezione-00-mobile.png" alt="Mobile Image" class="centered-image mobile-image">
+    </div>
+      <div class="section">
+
+   </div>
+    <div class="section">
+ </div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+  </div>
+
+  <a href="index.html" class="footer">
+    <img src="img/arrow.png" alt="Contact Icon">
+  </a>
+
+  <script>
+    var dropdownMenu = document.getElementById('dropdown-menu');
+
+    function toggleDropdown() {
+      dropdownMenu.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

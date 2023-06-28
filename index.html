@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Stili CSS */
+
+    @font-face {
+      font-family: 'Raleway';
+      src: url('fonts/Raleway-Regular.ttf') format('truetype');
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Raleway-Regular, sans-serif;
+      overflow: hidden;
+      background-image: url('img/homeimgnostar03.png');
+      min-height: 80vh;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    header {
+      background-color: rgba(255, 252, 249, 1);
+
+      padding: 20px;
+      position: relative;
+    }
+
+    .logo {
+      height: 3vh;
+    }
+
+    .small-logo {
+      height: 3vh;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      right: 0px;
+      height: 5000px;
+      width: 400px;
+      background-color: rgba(255, 252, 249, 0.9);
+      padding: 30px;
+      display: none;
+    }
+
+    .dropdown-menu.open {
+      display: block;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      color: #0022D4;
+      font-size: 40px;
+      font-family: Raleway;
+      align-content: right;
+      text-decoration: none;
+      padding: 5px;
+      text-align: right;
+      /* Allinea il testo a destra */
+    }
+
+    .dropdown-menu {
+      z-index: 9999;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      /* Imposta l'altezza al 100% della viewport */
+
+    }
+
+    .image-container img {
+      position: absolute;
+      height: center;
+      width: center;
+      max-width: 40%;
+      max-height: 40%;
+
+    }
+
+    .menu-image {
+      height: 50px;
+      /* Imposta l'altezza desiderata */
+      margin-left: 5px;
+      /* Aggiunge un margine a destra per separare l'immagine dal testo */
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: transparent;
+      text-align: center;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      /* Aggiornato per allineare il contenuto ai lati opposti */
+    }
+
+    .footer-button {
+      background-color: #0022D4;
+      color: #FFFCF9;
+      border: none;
+      border-radius: 30px;
+      padding: 18px 40px;
+      font-size: 16px;
+      font-family: Raleway;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      margin-right: 20px;
+
+    }
+
+    .footer-image {
+      height: 15px;
+      margin-left: 20px;
+    }
+
+
+
+
+
+    @media screen and (max-width: 768px) {
+      /* Stili per schermi di larghezza massima 768px (ad esempio dispositivi mobili) */
+
+      .image-container {
+        flex-direction: column;
+      }
+
+      .image-container img {
+        max-width: 80%;
+        max-height: 80%;
+        margin-bottom: 20px;
+
+      }
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="img/logo.png" alt="Logo" class="logo">
+    <img src="img/burgermenu.png" alt="Small Logo" class="small-logo" onclick="toggleDropdown()">
+    <div class="dropdown-menu" id="dropdown-menu">
+      <a href="philosophy.html"> philosophy</a>
+      <a href="projects.html">projects</a>
+      <a href="about.html">about</a>
+      <a href="contacts.html">
+        contacts
+        <br>
+        <br>
+
+        <img src="img/facciafois.png" alt="Small Image" class="menu-image">
+
+      </a>
+
+    </div>
+  </header>
+
+  <div class="image-container">
+
+    <img src="img/homeimagewhitebar.svg" alt="Image 2">
+  </div>
+
+  <footer class="footer">
+    <img src="img/2023.svg" alt="Small Logo" class="footer-image" style="margin-top: 30px;">
+    <a href="contacts.html" class="footer-button">contact me</a>
+  </footer>
+
+  <script>
+    var dropdownMenu = document.getElementById('dropdown-menu');
+
+    function toggleDropdown() {
+      dropdownMenu.classList.toggle('open');
+    }
+  </script>
+</body>
+
+</html>
