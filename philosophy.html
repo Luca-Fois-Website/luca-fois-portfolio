@@ -37,7 +37,7 @@
     }
 
     .small-logo {
-      height: 3vh;
+      height: 4vh;
       position: absolute;
       top: 20px;
       right: 60px;
@@ -186,6 +186,29 @@ display: none;
       object-fit: contain;
     }
 
+    .footer-image {
+      position: absolute;
+      bottom: 10px;
+      right: 60px;
+      width: 80px;
+      height: 50px;
+      background-color: transparent;
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+
+    }
+
+    .footer-image img {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+      display: block;
+    }
+
     @media screen and (max-width: 768px) {
 
       /* Stili per schermi di larghezza massima 768px (ad esempio dispositivi mobili) */
@@ -224,6 +247,29 @@ display: none;
   display: block;
 }
 
+
+.footer-image {
+  position: absolute;
+  bottom: 10px;
+  right: 40px;
+  width: 80px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.footer-image img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  display: block;
+}
+
 .footer-button {
   position: fixed;
   bottom: 20px;
@@ -242,13 +288,15 @@ display: none;
   text-decoration: none;
 }
 
+
+
 .footer-button img {
   width: 25px;
   height: 25px;
   object-fit: contain;
 }
-    }
 
+    }
 
 
 
@@ -268,7 +316,7 @@ display: none;
     <a href="index.html">
       <img src="img/logo.png" alt="Logo" class="logo">
     </a>
-    <img src="img/burgermenu.png" alt="Small Logo" class="small-logo" onclick="toggleDropdown()">
+    <img src="img/menu-02.svg" alt="Small Logo" class="small-logo" onclick="toggleDropdown()">
     <div class="dropdown-menu" id="dropdown-menu">
       <a href="philosophy.html">philosophy</a>
       <a href="projects.html">projects</a>
@@ -298,9 +346,15 @@ display: none;
     <div class="section"></div>
   </div>
 
+  <div class="footer-image">
+  <img src="img/scrolldown.svg" alt="Small Image">
+</div>
+
   <a href="index.html" class="footer">
     <img src="img/arrow.png" alt="Contact Icon">
+
   </a>
+
 
   <script>
     var dropdownMenu = document.getElementById('dropdown-menu');

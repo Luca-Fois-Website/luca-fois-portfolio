@@ -40,7 +40,7 @@
     }
 
     .small-logo {
-      height: 3vh;
+      height: 4vh;
       position: absolute;
       top: 20px;
       right: 60px;
@@ -113,6 +113,9 @@
     .section {
       height: 100vh;
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .section:nth-child(odd) {
@@ -125,13 +128,53 @@
 
 
     .section:nth-child(1) {
-      background-image: url('img/sezione-02-about.png');
+      background-image: url('img/sezione-02-back.png');
       background-size: cover;
       background-repeat: no-repeat;
-      background-position: left;
+      background-position: center center;
     }
 
+    .section:nth-child(1) img {
+      max-width: 80%;
+      max-height: 80%;
+    }
+    
+    @media screen and (max-width: 912px) {
+      .section:nth-child(1) {
+        background-image: url('img/sezione-02-about-mobile.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left;
+      }
 
+      .section:nth-child(1) img {
+        display: none;
+      }
+
+      .footer-button {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background-color: #0022D4;
+        color: #FFFCF9;
+        border: 1.5px solid #0022D4;
+        border-radius: 40px;
+        font-family: Raleway;
+        font-size: 15px;
+        text-decoration: none;
+      }
+
+      .footer-button img {
+        width: 25px;
+        height: 25px;
+        object-fit: contain;
+      }
+    }
 
     @media screen and (max-width: 768px) {
       .section:nth-child(1) {
@@ -141,30 +184,33 @@
         background-position: left;
       }
 
+      .section:nth-child(1) img {
+        display: none;
+      }
+
       .footer-button {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  background-color: #0022D4;
-  color: #FFFCF9;
-  border: 1.5px solid #0022D4;
-  border-radius: 40px;
-  font-family: Raleway;
-  font-size: 15px;
-  text-decoration: none;
-}
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background-color: #0022D4;
+        color: #FFFCF9;
+        border: 1.5px solid #0022D4;
+        border-radius: 40px;
+        font-family: Raleway;
+        font-size: 15px;
+        text-decoration: none;
+      }
 
-.footer-button img {
-  width: 25px;
-  height: 25px;
-  object-fit: contain;
-}
-
+      .footer-button img {
+        width: 25px;
+        height: 25px;
+        object-fit: contain;
+      }
     }
 
   </style>
@@ -176,7 +222,7 @@
       <img src="img/logo.png" alt="Logo" class="logo">
     </a>
 
-    <img src="img/burgermenu.png" alt="Small Logo" class="small-logo" onclick="toggleDropdown()">
+    <img src="img/menu-02.svg" alt="Small Logo" class="small-logo" onclick="toggleDropdown()">
     <div class="dropdown-menu" id="dropdown-menu">
       <a href="philosophy.html">philosophy</a>
       <a href="projects.html">projects</a>
@@ -191,15 +237,18 @@
   </header>
 
   <div class="content">
-    <div class="section"></div>
+    <div class="section">
+      <img src="img/sezione-02-text.svg" alt="Your Image">
+    </div>
     <div class="section"></div>
   </div>
 
   <footer class="footer">
-    <a href=index.html>
-    <button class="footer-button">
-      <img src="img/arrow.png" alt="Contact Icon">
-    </button>
+    <a href="index.html">
+      <button class="footer-button">
+        <img src="img/arrow.png" alt="Contact Icon">
+      </button>
+    </a>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
