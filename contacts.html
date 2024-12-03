@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<language="en">
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -176,25 +177,18 @@ top: 100px;
 </head>
 
 <body>
-  <header>
+  <header>  
     <a href="index.html">
-      <img src="img/logo.png" alt="Logo" class="logo">
-    </a>
-
+      <img src="img/logo.png" alt="Logo" class="logo"></a>
     <img src="img/menu-02.svg" alt="Small Logo" class="small-logo" onclick="toggleDropdown()">
     <div class="dropdown-menu" id="dropdown-menu">
-      <a href="philosophy.html">
-         philosophy</a>
+      <a href="philosophy.html">philosophy</a>
       <a href="projects.html">projects</a>
       <a href="about.html">about</a>
-      <a href="contacts.html">
-        contacts
-        <br>
-        <br>
-
-        <img src="img/facciafois.png" alt="Small Image" class="menu-image">
-
-   </a>
+      <a href="contacts.html">contacts
+        <br><br>
+        <img src="img/facciafois.png" alt="Small Image" class="menu-image"></a>
+    </div>
   </header>
 
   <div class="top-left-image">
@@ -235,10 +229,10 @@ top: 100px;
 </body>
 <script>
 
-  var dropdownMenu = document.getElementById('dropdown-menu');
+var dropdownMenu = document.getElementById('dropdown-menu');
 
-  function toggleDropdown() {
-    dropdownMenu.classList.toggle('open');
-  }
+function toggleDropdown() {
+  dropdownMenu.classList.toggle('open');
+}
 </script>
 </html>
