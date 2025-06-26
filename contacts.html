@@ -1,178 +1,10 @@
 <!DOCTYPE html>
+<language="en">
 <html>
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    /* Stili CSS */
-
-    @font-face {
-      font-family: 'Raleway';
-      src: url('fonts/Raleway-Regular.ttf') format('truetype');
-    }
-
-    body {
-      background-color: #FFFCF9;
-      margin: 0;
-      padding: 0;
-
-      overflow: hidden;
-    }
-
-    header {
-      background-color: #FFFCF9;
-      padding: 20px;
-      position: relative;
-    }
-
-    .logo {
-      height: 3vh;
-    }
-
-    .small-logo {
-      height: 4vh;
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      cursor: pointer;
-    }
-
-
-    .top-left-image {
-      position: fixed;
-      top: 80px;
-      left: 20px;
-    }
-
-
-    .top-left-image img {
-  width: 90%; /* Dimensione desiderata in pixel */
-  height: auto; /* Mantieni l'aspetto proporzionale */
-left: 20px;
-top: 100px;
-}
-
-
-.bottom-right-image {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-}
-
-.bottom-right-image img {
-
-  width: auto;
-  height: 80vh;
-  margin-right: 10px;
-}
-
-
-
-/* Media query per dispositivi mobili */
-@media screen and (max-width: 912px) {
-  .bottom-right-image {
-    position: fixed;
-    left: 50%;
-    bottom: 0;
-  }
-}
-
-
-.button-container {
-  margin-top: 40px; /* Aggiungi spazio tra l'immagine e i pulsanti */
-}
-
-.button-container button {
-  display: block;
-  margin-bottom: 10px; /* Aggiungi spazio tra i pulsanti */
-  width: 200px;
-  height: 50px;
-  font-family: Raleway;
-  font-size: 15px;
-  color: #FFFCF9;
-  background-color: #FF7A00;
-  color: #FFFCF9;
-  border: 1.5px solid #FF7A00;
-  border-radius: 30px;
-  cursor: pointer;
-
-
-}
-
-
-.button-container button:hover {
-  background-color:#FFFCF9;
-  color: #0022D4;
-  border: 1.5px solid #0022D4;
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  right: 0px;
-  height: 5000px;
-  width: 400px;
-  background-color: rgba(255, 252, 249, 0.9);
-  padding: 30px;
-  display: none;
-}
-
-.dropdown-menu.open {
-  display: block;
-}
-
-.dropdown-menu a {
-  display: block;
-  color: #0022D4;
-  font-size: 40px;
-  font-family: Raleway;
-  align-content: right;
-  text-decoration: none;
-  padding: 5px;
-  text-align: right; /* Allinea il testo a destra */
-}
-
-.menu-image {
-  height: 50px; /* Imposta l'altezza desiderata */
-  margin-left: 5px; /* Aggiunge un margine a destra per separare l'immagine dal testo */
-}
-
-.dropdown-menu {
-  z-index: 9999;
-}
-
-
-.footer-button {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 60px;
-  height: 60px;
-  background-color: #0022D4;
-  color: #FFFCF9;
-  border: 1.5px solid #0022D4;
-  border-radius: 40px;
-  font-family: Raleway-Regular;
-  font-size: 15px;
-  text-decoration: none;
-}
-
-
-.footer-button img {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
-}
-
-
-
-
-  </style>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
@@ -190,48 +22,36 @@ top: 100px;
     </div>
   </header>
 
-  <div class="top-left-image">
- <img src="img/contactphrase.svg" alt="Immagine 1">
-
-
-<div class="bottom-right-image">
-  <img src="img/indice.png" alt="Immagine 3">
-</div>
-
-
- <div class="button-container">
-   <button onclick="window.open('https://linktr.ee/lucafoiscontact?utm_source=linktree_admin_share')">MY SOCIAL MEDIA</button>
-    <button onclick="window.open('mailto:lucafois49@gmail.com')">SEND E-MAIL</button>
-
-    </a>
-</div>
-</div>
-</div>
-
-
+  <div class="contact-container">
+    <p class="contact-text">I like to call myself <br>
+      "<span class="connections-maker">connections-maker</span>",<br>
+      do you want to join my network?</p>
 
   <div class="bottom-right-image">
-    <img src="img/indice.png" alt="Immagine 1">
+    <img src="img/indice.png" alt="Luca Fois">
   </div>
 
+  <div class="button-container">
+    <button onclick="window.open('https://linktr.ee/lucafoiscontact?utm_source=linktree_admin_share')">MY SOCIAL MEDIA</button>
+    <button onclick="window.open('mailto:lucafois49@gmail.com')">SEND E-MAIL</button>
+  </div>
+</div>
 
-
-
- <footer class="footer">
-   <a href=index.html>
-   <button class="footer-button">
-     <img src="img/arrow.png" alt="Contact Icon">
-   </button>
- </footer>
-
+  <footer class="footer">
+    <a href="index.html">
+      <button class="footer-arrow">
+        <img src="img/arrow.png" alt="Contact Icon">
+      </button>
+    </a>
+  </footer>
 
 </body>
 <script>
 
-  var dropdownMenu = document.getElementById('dropdown-menu');
+var dropdownMenu = document.getElementById('dropdown-menu');
 
-  function toggleDropdown() {
-    dropdownMenu.classList.toggle('open');
-  }
+function toggleDropdown() {
+  dropdownMenu.classList.toggle('open');
+}
 </script>
 </html>
